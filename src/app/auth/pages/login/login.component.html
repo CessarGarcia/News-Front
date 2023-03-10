@@ -1,0 +1,38 @@
+<body>
+    <img src="https://i.ibb.co/HNm88z1/Agens-Presse.png" class="only-movil">
+    <div>
+        <p class="welcome">Welcome back</p>
+        <div class="row box container">
+            <form (ngSubmit)="login()" [formGroup]="miFormulario" class="col-12">
+                <div class="row container">
+                    <!-- Correo electronico-->
+                    <p class="formCamp">Enter your email:</p>
+                    <div class="input-field col s12">
+                        <input formControlName="email" id="email" type="email" class="validate">
+                        <label for="email">Email </label>
+                        <span class="helper-text" data-error="wrong" data-success="right">email@example.com</span>
+                    </div>
+    
+                    <!-- Contraseña -->
+                    <p class="formCamp">Enter your password:</p>
+                    <div class="input-field col s12">
+                        <input formControlName="password" id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+    
+                <div>
+                    <!--Boton para registrar-->
+                    <div class="input-field col s12">
+                        <button class="btn btn-login waves-effect waves-light">Login</button>
+                    </div>
+        
+                    <!--Boton para crear cuenta-->
+                    <div class="input-field col s12">
+                        <button routerLink="/auth/register" class="btn btn-signUp waves-effect waves-light">Create Account</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,54 @@
+<body>
+    <img src="https://i.ibb.co/HNm88z1/Agens-Presse.png" class="only-movil">
+    <p class="crear">Create an account </p>
+
+    <div class="row box container">
+        <form (ngSubmit)="register()" [formGroup]="miFormulario" class="col-12">
+            <div class="row container">
+                <!-- Correo electronico-->
+                <p>Enter your email:</p>
+                <div class="input-field col s12">
+                    <input formControlName="email" id="email" type="email" class="validate">
+                    <label for="email">Email </label>
+                    <span class="helper-text" data-error="wrong" data-success="right">email@example.com</span>
+                </div>
+
+                <!-- username -->
+                <p>Enter your username:</p>
+                <div class="input-field col s12">
+                    <input formControlName="username" id="username" type="text" class="validate">
+                    <label for="username">Username</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Example Name</span>
+                </div>
+
+                <!-- password -->
+                <p>Enter your password:</p>
+                <div class="input-field col s12">
+                    <input formControlName="password" id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Password min lenght 6 characters</span>
+                </div>
+
+                <!-- Repeat Contraseña -->
+                <p>Enter your password again:</p>
+                <div class="input-field col s12">
+                    <input formControlName="repeatPassword" id="repeat-password" type="password" class="validate">
+                    <label for="repeat-password">Repeat Password</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Repeat Password</span>
+                </div>
+            </div>
+
+            <div>
+                <!--Boton para registrar-->
+                <div class="input-field col s12">
+                    <button class="btn btn-signUp waves-effect waves-light">Create Account</button>
+                </div>
+    
+                <!--Boton para iniciar secccion-->
+                <div class="input-field col s12">
+                    <button routerLink="/auth/login" class="btn btn-login waves-effect waves-light">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>

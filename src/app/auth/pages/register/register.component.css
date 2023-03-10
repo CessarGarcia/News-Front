@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+
+.crear{
+    font-size: 55px;
+    color: azure;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box{
+    background-color: #2F528F;
+    width: 450px;
+    height: auto;
+    border-radius: 15px;
+    float: left;
+    margin-left: 75px;
+}
+
+.btn-signUp{
+    margin-left: 30px;
+    padding-bottom: 10px;
+    background-color: #C2407F;
+    width: 250px;
+    height: 40px;
+    font-weight: bold;
+    margin-left: 22%;
+    margin-bottom: 25px;
+    float: none;
+}
+
+.btn-signUp:hover{
+    background-color: #8f0c4b;
+    border-radius: 30px;
+}
+
+div > p{
+    text-align: left;
+    margin-left: 25px;
+    color: #f0ffff;
+    margin-bottom: -5px;
+    font-size: 20px;
+}
+
+.btn-login{
+    float: right;
+    background-color: rgb(59, 223, 114);
+}
+
+.btn-login:hover{
+    background-color: rgb(5, 236, 75);
+    border-radius: 30px;
+}
+
+@media screen and (min-width: 800px){
+    body {
+        height: 1000px;
+        width: 1300px;
+        background-image: url("https://i.ibb.co/mFsvWVZ/login-register.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .only-movil{
+        padding-left: 35px;
+        padding-top: 25px;
+        margin-bottom: -7%;
+        width: 300px;
+        height: 100px;
+    }
+    .crear{
+        padding-top: 3%;
+        padding-left: 3%;
+        padding-bottom: -5%;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    *{
+        margin: 0 auto;
+    }
+    body {
+        height: 1200px;
+        width: 550px;
+        background-image: url("https://th.bing.com/th/id/R.d1510462c7e0a5913be2ed9742e6ed0b?rik=d8G8NlYZui8%2buQ&pid=ImgRaw&r=0"); 
+    }
+    .box{
+        margin-top: 30px;
+        padding-top: 80px;
+        height: 500px;
+    }
+    .only-movil{
+        padding-left: 35px;
+        padding-top: 25px;
+        width: 300px;
+        height: 100px;
+        padding-bottom: -15px;
+    }
+    .crear{
+        text-align: center;
+        font-size: 50px;
+    }
+    .btn-singUp{
+        margin-top: 45px;
+    }
+}

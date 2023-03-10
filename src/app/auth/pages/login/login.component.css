@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+
+.welcome{
+    font-size: 55px;
+    color: azure;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+.box{
+    background-color: #2F528F;
+    width: 450px;
+    height: auto;
+    border-radius: 15px;
+    float: left;
+    margin-left: 75px;
+}
+
+.btn-login{
+    margin-left: 30px;
+    padding-bottom: 10px;
+    background-color: #C2407F;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    margin-left: 30%;
+    margin-bottom: 25px;
+}
+
+.btn-login:hover{
+    background-color: #c91d70;
+    border-radius: 30px;
+}
+
+.formCamp{
+    text-align: left;
+    margin-left: 25px;
+    color: #f0ffff;
+    margin-bottom: -5px;
+    font-size: 20px;
+}
+
+.btn-signUp{
+    float: right;
+    background-color: rgb(59, 223, 114);
+}
+
+.btn-signUp:hover{
+    background-color: rgb(5, 236, 75);
+    border-radius: 30px;
+}
+
+@media screen and (min-width: 800px){
+    body {
+        height: 850px;
+        background-image: url("https://i.ibb.co/mFsvWVZ/login-register.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .only-movil{
+        padding-left: 35px;
+        padding-top: 25px;
+        margin-bottom: -7%;
+        width: 300px;
+        height: 100px;
+    }
+    .welcome{
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+    .box{
+        padding-top: 25px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    *{
+        margin: 0 auto;
+    }
+    body {
+        height: 1200px;
+        width: 550px;
+        background-image: url("https://th.bing.com/th/id/R.d1510462c7e0a5913be2ed9742e6ed0b?rik=d8G8NlYZui8%2buQ&pid=ImgRaw&r=0"); 
+    }
+    .box{
+        margin-top: 30px;
+        padding-top: 80px;
+        height: 500px;
+    }
+    .only-movil{
+        padding-left: 35px;
+        padding-top: 25px;
+        width: 300px;
+        height: 100px;
+        padding-bottom: -15px;
+    }
+    .crear{
+        text-align: center;
+        font-size: 50px;
+    }
+    .btn-login{
+        margin-top: 45px;
+    }
+}
