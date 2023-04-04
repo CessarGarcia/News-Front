@@ -1,0 +1,19 @@
+.div-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+button{
+    display: block;
+    margin-top: 20px;
+    left: 59%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px){
+    button{
+        left: 79%;
+    }
+}

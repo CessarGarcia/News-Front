@@ -1,5 +1,52 @@
-<pre>
-    {{
-        user | json
-    }}
-</pre>
+<header>
+    <section>
+        <div style="background-image: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB7p?ver=837a');
+              height: 50vh;" class="img-portada">
+            <div class="row" style="background-color: rgb(15, 30, 53, 0.7);">
+                <div class="col s6 ">
+                    <img src="https://i.ibb.co/mvPGSrB/Agens-Presse.png" alt="Agens-Presse" class="logo">
+                </div>
+                <div class="col s6 div-buttons">
+                    <button class="btn-logout" (click)="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flexbox-align">
+            <button class="btn-menu" (click)="goToNoticias()"><i class="material-icons">language</i> Noticias</button>
+            <button class="btn-menu" (click)="goToClima()"><i class="material-icons">cloud_circle</i> Clima</button>
+            <button class="btn-menu" (click)="goToCripto()"><i class="material-icons">monetization_on</i> Criptomonedas</button>
+        </div>
+    </section>
+</header>
+
+<button class="crearNew blue" (click)="crearNewButton()">Crear noticia</button>
+
+<div class="container mt-3">
+    <!-- <pre>
+        {{
+            user | json
+        }}
+    </pre> -->
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Pais</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let noticia of news">
+                <td>{{noticia.titulo}}</td>
+                <td>{{noticia.contenido}}</td>
+                <td>{{noticia.category}}</td>
+                <td>{{noticia.country}}</td>
+                <td><button (click)="delete(noticia._id)" class="btn waves-effect waves-light red"> Eliminar</button></td>
+                <td><button class="btn waves-effect waves-light lime amber darken-1"> Actualizar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

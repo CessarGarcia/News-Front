@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { CreateNewsComponent } from './crud-news/pages/create-news/create-news.component';
 import { AuthGuard } from './guards/auth.guard';
+
+import { WeatherComponent } from './weather/weather.component';
+import {CriptoComponent} from './cripto/cripto.component';
 
 const routes: Routes = [
   {
@@ -14,6 +19,25 @@ const routes: Routes = [
     canLoad: [AuthGuard]
   },
   {
+    path: "create-news",
+    // loadChildren: () => import("./crud-news/pages/create-news/create-news.component").then(m => m.CreateNewsComponent),
+    component: CreateNewsComponent,
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard]
+  },
+  {
+    path: "weather",
+    component: WeatherComponent,
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard]
+  },
+  {
+    path: "Criptomonedas",
+    component: CriptoComponent,
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard]
+  },
+  {
     path: "**",
     redirectTo: "auth"
   }
@@ -21,6 +45,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

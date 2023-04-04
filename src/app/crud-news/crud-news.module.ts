@@ -3,15 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { CrudNewsRoutingModule } from './crud-news-routing.module';
 import { MainNewsComponent } from './pages/main-news/main-news.component';
+import { UpdateComponent } from './pages/update/update.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CreateNewsComponent } from './pages/create-news/create-news.component';
+
 
 
 @NgModule({
   declarations: [
-    MainNewsComponent
+    MainNewsComponent,
+    UpdateComponent,
+    CreateNewsComponent,
   ],
   imports: [
     CommonModule,
-    CrudNewsRoutingModule
+    CrudNewsRoutingModule,
+    ReactiveFormsModule,
   ]
 })
 export class CrudNewsModule { }
