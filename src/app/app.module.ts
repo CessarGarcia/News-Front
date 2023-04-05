@@ -7,6 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//services
+// import { weatherService } from './services/weather.service';
+
 //components
 import { WeatherComponent } from './weather/weather.component';
 import { CriptoComponent } from './cripto/cripto.component';

@@ -1,2 +1,69 @@
 <app-navbar></app-navbar>
-<p>weather works!</p>
+
+<body>
+    <div class="contenedor">
+        <div class="upper-data">
+            <img src="{{hot}}" alt="" *ngIf="weather.main.temp > 20">
+            <img [src]="cold" alt="" *ngIf="weather.main.temp <= 20">
+            
+            <div *ngIf="weather" class="weather-data">
+                <div class="location">{{weather.name}}</div>
+                <div class="temperature">{{weather.main.temp}}°C</div>
+                <div class="description">{{weather.weather[0].description}}</div>
+            </div>
+        </div>
+    
+        <div class="lower-data">
+            <div class="more-info-label">
+                <form (submit)="submitLocation(cityName)">
+                    <input type="text" class="form-control" placeholder="Search by city name" #cityName>
+                    <button class="btn btns">Get Weather</button>
+                </form>
+            </div>
+
+            <p class="more_information">More Information</p>
+            <div class="more-info-container">
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img [src]="min_temperature" alt="">
+                        <span>min</span>
+                    </div>
+                    <div *ngIf="weather" class="info-block-value">
+                        {{weather.main.temp_min}}°C
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img [src]="max_temperature" alt="">
+                        <span>max</span>
+                    </div>
+                    <div *ngIf="weather" class="info-block-value">
+                        {{weather.main.temp_max}}°C
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img [src]="humidity" alt="">
+                        <span>humidity</span>
+                    </div>
+                    <div *ngIf="weather" class="info-block-value">
+                        {{weather.main.humidity}}%
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img [src]="wind" alt="">
+                        <span>wind</span>
+                    </div>
+                    <div *ngIf="weather" class="info-block-value">
+                        {{weather.wind.speed}}km/h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
