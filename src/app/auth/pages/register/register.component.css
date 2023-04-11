@@ -1,48 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans:wght@300&display=swap');
+
+*{
+    margin: 0 auto;
+}
+
+.background{
+    /* background-image: url("https://wallpapercave.com/dwp1x/wp4094503.jpg"); */
+    background-image: url("https://i.pinimg.com/originals/dc/d7/8d/dcd78d28086a4f57a6e918d8cfb86522.jpg");
+    height: 155%;
+    width: 100% !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: -1;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto
+}
+.logo{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 28px;
+    margin-left: 5px;
+    margin-right: 25px;
+    text-shadow:2px 2px 4px #FFF, 4px 4px 4px #111, 6px 6px 4px #222;
+}
+
+p > img{
+    width: 40px;
+    margin-right: 8px;
+}
 
 .crear{
-    font-size: 55px;
     color: azure;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lobster', cursive;
+    margin-left: 3%;
+    font-size: 5em;
+    text-align: center !important;
+    transform: rotate(-5deg);
+    text-decoration: underline;
+    text-shadow:2px 2px 4px #FFF, 4px 4px 4px #111, 6px 6px 4px #222;
+} 
+
+.contenido{
+    background: rgb(249, 249, 249);
+    border: 3px solid rgb(0, 85, 255, 0.7);
+	margin: 75px auto;
+	padding: 25px 0 0;
+	position: relative;
+	text-align: center;
+	width: 450px;
+    height: 600px;
+    border-radius: 3%;
 }
 
-.box{
-    background-color: #2F528F;
-    width: 450px;
-    height: auto;
-    border-radius: 15px;
-    float: left;
-    margin-left: 75px;
+.contenido:after, .contenido:before{
+	background: rgb(249, 249, 249, 0.8);
+	border: 2px solid rgb(0, 85, 255, 0.8);
+    border-radius: 3%;
+	content: "";
+	display: block;
+	height: 100%;
+	left: -15px;
+    top: -10px;
+	position: absolute;
+	width: 100%;
 }
 
-.btn-signUp{
-    margin-left: 30px;
-    padding-bottom: 10px;
-    background-color: #C2407F;
-    width: 250px;
-    height: 40px;
-    font-weight: bold;
-    margin-left: 22%;
-    margin-bottom: 25px;
-    float: none;
+.contenido:after{
+    transform: rotate(3deg);
+	z-index: -1;
+    background: rgb(249, 249, 249, 0.7);
 }
 
-.btn-signUp:hover{
-    background-color: #8f0c4b;
-    border-radius: 30px;
+.contenido:before{
+	transform: rotate(-3deg);
+	top: 5;
+    left: -15;
+	z-index: -1;
+    border: 1px solid rgb(0, 85, 255,0.9);
+    background: rgb(249, 249, 249, 0.5);
 }
 
-div > p{
-    text-align: left;
-    margin-left: 25px;
-    color: #f0ffff;
-    margin-bottom: -5px;
-    font-size: 20px;
+.contenido form input:focus{
+	background-color: #fff;
+	border: 1px solid #1c5eed;
+	outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contenido form input:hover{
+    background: rgb(81, 214, 254, 0.3);
+    border: 1px solid #1c5eed;
+    border-radius: 10px;
 }
 
 .btn-login{
-    float: right;
+    float: left;
     background-color: rgb(59, 223, 114);
+    margin-left: 25px;
+    margin-top: 25px;
 }
 
 .btn-login:hover{
@@ -50,56 +112,29 @@ div > p{
     border-radius: 30px;
 }
 
-@media screen and (min-width: 800px){
-    body {
-        height: 1000px;
-        width: 1300px;
-        background-image: url("https://i.ibb.co/mFsvWVZ/login-register.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-    .only-movil{
-        padding-left: 35px;
-        padding-top: 25px;
-        margin-bottom: -7%;
-        width: 300px;
-        height: 100px;
-    }
-    .crear{
-        padding-top: 3%;
-        padding-left: 3%;
-        padding-bottom: -5%;
-    }
+.btn-signUp{
+    margin-right: 30px;
+    padding-bottom: 10px;
+    background-color: #C2407F;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    float: right;
 }
 
+.btn-signUp:hover{
+    background-color: #c91d70;
+    border-radius: 30px;
+}
 
-@media screen and (max-width: 600px){
-    *{
-        margin: 0 auto;
-    }
-    body {
-        height: 1200px;
-        width: 550px;
-        background-image: url("https://th.bing.com/th/id/R.d1510462c7e0a5913be2ed9742e6ed0b?rik=d8G8NlYZui8%2buQ&pid=ImgRaw&r=0"); 
-    }
-    .box{
-        margin-top: 30px;
-        padding-top: 80px;
-        height: 500px;
-    }
-    .only-movil{
-        padding-left: 35px;
-        padding-top: 25px;
-        width: 300px;
-        height: 100px;
-        padding-bottom: -15px;
-    }
-    .crear{
-        text-align: center;
-        font-size: 50px;
-    }
-    .btn-singUp{
-        margin-top: 45px;
-    }
+.formCamp{
+    text-align: left;
+    margin-left: 25px;
+    color: #000000;
+    /* margin-bottom: -3px; */
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    margin-bottom: 1rem;
 }

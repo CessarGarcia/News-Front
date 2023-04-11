@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import {CrudService} from '../../../services/crud.service';
+
+import Swal from 'sweetalert2';
+
+import {CrudService} from '../../../services/crud-news.service';
+import {newsModels} from '../../../models/news.models';
 
 @Component({
   selector: 'app-main-news',
@@ -9,40 +12,36 @@ import {CrudService} from '../../../services/crud.service';
   styleUrls: ['./main-news.component.css'],
 })
 export class MainNewsComponent implements OnInit{
-  news: Array<any> = [];
-  user: any;
-  newNoticiaForm: FormGroup =  this.formBuilder.group({
-    newNoticia: [""]
-  });
-
-  constructor(private crudService: CrudService, private router: Router, private formBuilder :FormBuilder){}
+  listOfNoticias: newsModels[] = [];
+  constructor(private _crudService: CrudService, private router: Router){}
 
   ngOnInit(): void {
-    this.user = this.crudService.user;
-    this.crudService.read().subscribe((res) =>{
-      this.news = res.noticia;
-    });
+    this.getNoticias();
   }
 
-  delete(id: string){
-    this.crudService.delete(id).subscribe(response =>{
-      this.crudService.read().subscribe((res) =>{
-        this.news = res.noticia;
-      })
+  getNoticias(){
+    this._crudService.getNoticias().subscribe(data => {
+      console.log(data);
+      this.listOfNoticias = data.readnoticias;
+    }, error => {
+      console.log(error);
     })
   }
 
-  create(){
-    console.log(this.newNoticiaForm.value.newNoticia);
-    this.crudService.create(this.newNoticiaForm.value.newNoticia).subscribe((response) =>{
-      this.newNoticiaForm.reset();
-
-      this.crudService.read().subscribe((res) =>{
-        this.news = res.noticia;
-      });
-    });
+  deleteNoticias(id: any){
+    this._crudService.deleteNoticia(id).subscribe(data =>{
+      Swal.fire(
+        'Eliminado Correctamente',
+        '¡La noticia se ha eliminado correctamente!',
+        'success'
+      )
+      this.getNoticias();
+    }, error => {
+      console.log(error);
+    })
   }
 
+  //buttons
   logout(){
     localStorage.clear();
     this.router.navigateByUrl("/auth");

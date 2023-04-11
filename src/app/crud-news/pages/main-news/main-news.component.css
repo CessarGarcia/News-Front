@@ -1,7 +1,34 @@
-.logo{
+body {
+    background: #159957;
+    background: -webkit-linear-gradient(to right, #155799, #159957);
+    background: linear-gradient(to right, #155799, #159957);
+
+    height: 450px;
+}
+
+table {
+    background-color: #bfd1ec;
+    border-radius: 30px;
+    display: table !important;
+    /* width: 100%; */
+    overflow-x: auto;
+}
+tbody > tr:hover{
+    background-color: #fff;
+}
+.table-responsive{
+    overflow-x: auto;
+    max-width: 100% !important;
+    display: table !important;
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+.logo {
     margin: 10px;
 }
-.img-portada{
+
+.img-portada {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,33 +39,36 @@
 }
 
 
-.crearNew{
-    font-size: 15px !important;
+.crearNew {
+    font-size: 12px !important;
     text-align: center;
     color: #fff;
     margin-top: 15px;
     width: 130px;
-    height: 50px; 
-    cursor: pointer;
+    height: 50px;
+    float: right !important;
+    margin-right: 25px;
+    margin-bottom: 15px;
 }
-.crearNew:hover{
+
+.crearNew:hover {
     background-color: #0059ff !important;
     border-radius: 30px;
     text-decoration: underline;
 }
 
-.btn-logout{
+.btn-logout {
     margin-right: 15px;
     background-color: rgba(199, 17, 199, 0.5);
     width: 100px;
-    height: 50px;    
+    height: 50px;
     border-color: brown;
     cursor: pointer;
-    color:rgb(240, 248, 255);
+    color: rgb(240, 248, 255);
     font-size: 15px;
 }
 
-.btn-logout:hover{
+.btn-logout:hover {
     background-color: rgb(199, 17, 199);
     border-radius: 30px;
     text-decoration: underline;
@@ -51,7 +81,7 @@
     margin-top: 15px;
 }
 
-.mt-3{
+.mt-3 {
     margin-top: 3rem;
 }
 
@@ -66,14 +96,14 @@
 
     background: #FF813E;
     color: #fff;
-    border-radius:10px;
+    border-radius: 10px;
 
-    box-shadow: 10px 7px 32px 1px rgba(0,0,0,0.66);
-    -webkit-box-shadow: 10px 7px 32px 1px rgba(0,0,0,0.66);
-    -moz-box-shadow: 10px 7px 32px 1px rgba(0,0,0,0.66);
+    box-shadow: 10px 7px 32px 1px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 10px 7px 32px 1px rgba(0, 0, 0, 0.66);
+    -moz-box-shadow: 10px 7px 32px 1px rgba(0, 0, 0, 0.66);
 }
 
-.btn-menu{
+.btn-menu {
     padding: 5px 20px;
     border: solid #EEE;
     border-radius: 30px;
@@ -84,26 +114,60 @@
     background: #FF813E;
     color: #fff;
 }
-.btn-menu:hover{
+
+.btn-menu:hover {
     background-color: orangered;
 }
+td > button{
+    width: 45px;
+    height: 28px;
+    border-radius: 10px;
+}
+.icons-table {
+    font-size: 15px;
+}
+@media screen and (max-width: 800px) {
+    table{
+        width: 300px !important; 
+        /* display: table !important; */
+    }
 
-@media screen and (max-width: 600px){
-    button{
+    .table-responsive {
+        margin-left: -20px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .table-responsive {
+        margin-left: -6px;
+        width: 100% !important;
+        display: block !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    button {
         width: 75px;
-        height: 25px; 
+        height: 25px;
         font-size: 10px;
     }
+
     .flexbox-align {
         height: 65px;
         width: 300px;
     }
-    .btn-menu{
+
+    .btn-menu {
         font-size: 10px;
         margin: 3px;
     }
-    i{
+
+    button > i {
         font-size: 10px;
         text-align: center;
+    }
+    .table-responsive {
+        width:100% !important;
+        display: block !important;
+        margin-left: -5px;
     }
 }

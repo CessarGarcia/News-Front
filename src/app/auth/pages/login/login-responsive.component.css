@@ -1,0 +1,103 @@
+@media all and (min-width: 1000px){
+    html {   
+        min-width: 320px !important;   
+        max-width: 1400px !important; 
+    }
+}
+@media screen and (max-width: 1000px){
+    .background{
+        height: 150% !important;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .welcome{
+        font-size: 30px;
+    }
+    .contenido{
+        width: 300px;
+        height: 370px;
+    }
+    .logo{
+        font-size: 15px;
+    }
+    p > img{
+        width: 25px;
+    }
+    .background{
+        height: 130% !important;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .contenido{
+        width: 250px;
+        height: 370px !important;
+    }
+    .logo{
+        font-size: 15px;
+    }
+    p > img{
+        width: 25px;
+    }
+    .btn-responsive{
+        width: 95px;
+        height: 30px;
+    }
+    .background{
+        min-width: 109% !important;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .contenido{
+        width: 200px !important;
+        height: 370px !important;
+        margin-left: 40px !important;
+    }
+    .background{
+        min-width: 139% !important;
+    }
+}
+@media screen and (min-width: 280px){
+    .only-movil{
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+    html {   
+        min-width: 320px !important;   
+        max-width: 1400px !important; 
+    }
+}
+@media screen and (max-width: 255px){
+    .contenido{
+        width: 150px;
+    }
+    p > img{
+        padding-top: 5px;
+    }
+    .formCamp{
+        font-size: 15px;
+    }
+    html {   
+        min-width: 320px !important;   
+        max-width: 1400px !important; 
+        display: flex !important;
+    }
+    .background{
+        min-width: 138% !important;
+        display: flex !important;
+    }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 175px){
+    .background{
+        min-width: 165% !important;
+    }
+}
+@media all and (max-width: 200px){
+    .background{
+        min-width: 178% !important;
+    }
+}

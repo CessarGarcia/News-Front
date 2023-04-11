@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css', 'register-responsive.component.css']
 })
 export class RegisterComponent {
   miFormulario: FormGroup = this.fb.group({

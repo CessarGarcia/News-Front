@@ -1,26 +1,50 @@
-<div class="container" style="margin-top: 30px;">
-    <form>
-        <div class="row">
-            <div class="input-field col s6">
-                <input id="create" formControlName="newNoticia" type="text" class="validate">
-                <label class="active" for="create">Titulo...</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="create" formControlName="newNoticia" type="text" class="validate">
-                <label class="active" for="create">Contenido...</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="create" formControlName="newNoticia" type="text" class="validate">
-                <label class="active" for="create">Escoge una categoria...</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="create" formControlName="newNoticia" type="text" class="validate">
-                <label class="active" for="create">Pais...</label>
-            </div>
+<body>
+    <div class="container">
+        <div class="rows">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="mb-5">
+                            <span class="titulo">Crear noticia</span>
+                        </div>
+                        
+                        <form class="mt-3" [formGroup]="noticiaForm" (ngSubmit)="crearNoticia()">
+                            <button class="mb-3 btn float-end" [disabled]="noticiaForm.invalid" type="submit">Guardar</button>
+
+                                                        <!-- Titulo de la noticia -->
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Titulo" formControlName="titulo">
+                                <span *ngIf="noticiaForm.get('titulo')?.hasError('required') && noticiaForm.get('titulo')?.touched"
+                                class="text-danger">El titulo de la noticia <strong>es obligatorio</strong></span>
+                            </div>
+                            
+                                                        <!-- Descripcion de la noticia -->
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Descripcion" formControlName="descripcion">
+                                <span *ngIf="noticiaForm.get('descripcion')?.hasError('required') && noticiaForm.get('descripcion')?.touched"
+                                class="text-danger">La descripcion de la noticia <strong>es obligatorio</strong></span>
+                            </div>
+                            
+                                                        <!-- Categoria de la noticia -->
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Categoria" formControlName="categoria">
+                                <span *ngIf="noticiaForm.get('categoria')?.hasError('required') && noticiaForm.get('categoria')?.touched"
+                                class="text-danger">La categoria de la noticia <strong>es obligatorio</strong></span>
+                            </div>
+                                                        <!-- Pais de la noticia -->
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Pais" formControlName="pais">
+                                <span *ngIf="noticiaForm.get('pais')?.hasError('required') && noticiaForm.get('pais')?.touched"
+                                class="text-danger">El pais de la noticia <strong>es obligatorio</strong></span>
+                            </div>
+                        </form>
     
-            <div class="input-field col s6 div-button">
-                <button class="btn waves-effect waves-light blue">Crear</button>
+                        <div class="m-3">
+                            <button routerLink="/crud-news" type="submit" class="m-3 btn float-start">Regresar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </form>
-</div>
+    </div>
+</body>

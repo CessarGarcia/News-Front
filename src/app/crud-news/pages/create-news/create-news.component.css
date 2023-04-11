@@ -1,19 +1,111 @@
-.div-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-button{
-    display: block;
-    margin-top: 20px;
-    left: 59%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+body{
+    background: #159957;
+    background: -webkit-linear-gradient(to right, #155799, #159957);
+    background: linear-gradient(to right, #155799, #159957);
+
+    height: 1000px !important;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    
 }
 
+form{
+    /* background-color: rgba(201, 233, 252, 0.5); */
+    background-color: rgba(171,222,250, 0.35);
+    /* margin-left: 15%; */
+    margin-bottom: 5%;
+    padding: 10%;
+}
+
+.col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%
+}
+.offset-lg-3 {
+    margin-left: 25%;
+    margin-top: 8%;
+}
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.titulo{
+    font-size: 35px;
+    text-align: center;
+    font-family: 'sans-serif, Verdana, Segoe UI', Tahoma, Geneva;
+    font-weight: bolder;
+    color: rgb(228, 24, 228);
+    text-shadow: 7px 1px 15px black;
+}
+
+.form-control{
+    font-size: 1.25rem !important;
+    border-radius: 0.5rem !important;
+    border: #155799 solid 1.5px !important;
+    text-align: center;
+    display: block;
+    width: 90% !important;
+    color: #212529;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 5 5 5 .25rem rgb(0, 102, 255)
+}
+.form-control::placeholder {
+    color: rgba(33, 37, 41, 0.75);
+    opacity: 1
+}
+.form-control:disabled {
+    background-color: #e9ecef;
+    opacity: 1
+}
+input{
+    margin: 0px;
+}
+
+
+
+button{
+    display: block;
+}
+
+@media screen and (min-width: 1000px){
+    body{
+        height: 1000px !important;
+    }
+}
+@media screen and (max-width: 1100px){
+    body{
+        height: 1100px !important;
+    }
+}
 @media screen and (max-width: 600px){
     button{
         left: 79%;
+        text-overflow: ellipsis;
+        overflow-x: hidden;
+    }
+    body{
+        height: 1200px !important;
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .form-control {
+        transition: none
     }
 }

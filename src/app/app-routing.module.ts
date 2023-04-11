@@ -26,6 +26,10 @@ const routes: Routes = [
     canLoad: [AuthGuard]
   },
   {
+    path: 'editar-noticia/:id',
+    component: CreateNewsComponent 
+  },
+  {
     path: "weather",
     component: WeatherComponent,
     canActivate: [AuthGuard],

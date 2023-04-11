@@ -20,33 +20,36 @@
     </section>
 </header>
 
-<button class="crearNew blue" (click)="crearNewButton()">Crear noticia</button>
 
-<div class="container mt-3">
-    <!-- <pre>
-        {{
-            user | json
-        }}
-    </pre> -->
-    <table>
-        <thead>
-            <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Pais</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr *ngFor="let noticia of news">
-                <td>{{noticia.titulo}}</td>
-                <td>{{noticia.contenido}}</td>
-                <td>{{noticia.category}}</td>
-                <td>{{noticia.country}}</td>
-                <td><button (click)="delete(noticia._id)" class="btn waves-effect waves-light red"> Eliminar</button></td>
-                <td><button class="btn waves-effect waves-light lime amber darken-1"> Actualizar</button></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<body>
+    <div class="container mt-3">
+        <button class="crearNew blue btn" (click)="crearNewButton()" *ngIf="15 >14">Crear noticia</button>
+        <!-- <pre>
+            {{
+                user | json
+            }}
+        </pre> -->
+        <table *ngIf="listOfNoticias.length > 0" class="responsive-table highlight table-hover centered table-responsive">
+            <thead class="teal">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Pais</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr *ngFor="let noticia of listOfNoticias">
+                    <td>{{noticia.titulo}}</td>
+                    <td>{{noticia.descripcion}}</td>
+                    <td>{{noticia.categoria}}</td>
+                    <td>{{noticia.pais}}</td>
+                    <td><button [routerLink]="['/editar-noticia/', noticia._id]" class="btn waves-effect waves-light lime amber darken-1" ><i class="material-icons icons-table">edit</i></button></td>
+                    <td><button (click)="deleteNoticias(noticia._id)" class="btn waves-effect waves-light red" ><i class="material-icons icons-table ">delete</i></button></td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 class="text-danger mt-3" *ngIf="listOfNoticias.length <= 0">La lista de productos esta vacia</h5>
+    </div>
+</body>

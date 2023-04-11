@@ -39,13 +39,7 @@ img{
     width: 1.5rem;
     margin-right: 5px;
 }
-span{
-    color: #fff;
-}
-th{
-    color: #fff;
-}
-td{
+span, th, td{
     color: #fff;
 }
 

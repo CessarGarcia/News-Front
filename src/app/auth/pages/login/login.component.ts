@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css', 'login-responsive.component.css']
 })
 export class LoginComponent {
   miFormulario: FormGroup = this.fb.group({
