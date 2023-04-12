@@ -42,7 +42,9 @@ export class AuthService {
           if (res.ok === true) {
             this._user = {
               id: res.id,
+              email: res.email,
               username: res.username,
+              password: res.password,
               token: res.token
             }
           } else {
