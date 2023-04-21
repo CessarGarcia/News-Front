@@ -3,8 +3,8 @@
 <body>
     <div class="contenedor">
         <div class="upper-data">
-            <img src="{{hot}}" alt="" *ngIf="weather.main.temp > 20">
-            <img [src]="cold" alt="" *ngIf="weather.main.temp <= 20">
+            <img src="{{hot}}" alt="" *ngIf="weather && weather.main.temp > 20">
+            <img [src]="cold" alt="" *ngIf="weather && weather.main.temp <= 20">
             
             <div *ngIf="weather" class="weather-data">
                 <div class="location">{{weather.name}}</div>

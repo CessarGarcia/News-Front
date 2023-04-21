@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -11,13 +11,17 @@ import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CriptoComponent } from './cripto/cripto.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { InterceptorAuthInterceptor } from './interceptors/interceptor-auth.service';
+import { ErrorApiInterceptor } from './interceptors/error-api-interceptor.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
     CriptoComponent,
-    NavbarComponent
+    NavbarComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,16 @@ import { NavbarComponent } from './navbar/navbar.component';
     ReactiveFormsModule,
   ],
   providers: [
-    
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorAuthInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorApiInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
