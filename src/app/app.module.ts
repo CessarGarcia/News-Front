@@ -26,7 +26,7 @@ import { ComentariosComponent } from './comentarios/comentarios.component';
     ComentariosComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
