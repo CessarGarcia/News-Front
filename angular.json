@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": ["lodash"],
-            "outputPath": "dist/mean-front/browser",
+            "outputPath": "dist/mean-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -92,59 +92,6 @@
             ],
             "scripts": []
           }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/mean-front/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media"
-            },
-            "development": {
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false,
-              "vendorChunk": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "mean-front:build:development",
-              "serverTarget": "mean-front:server:development"
-            },
-            "production": {
-              "browserTarget": "mean-front:build:production",
-              "serverTarget": "mean-front:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "routes": [
-              "/"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "mean-front:build:production",
-              "serverTarget": "mean-front:server:production"
-            },
-            "development": {
-              "browserTarget": "mean-front:build:development",
-              "serverTarget": "mean-front:server:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }

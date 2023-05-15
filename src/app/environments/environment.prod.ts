@@ -1,4 +1,4 @@
 export const environment  ={
-    production: true,
-    baseUrl: "https://agenspresse.vercel.app",
+    production: false,
+    baseUrl: "http://localhost:3000",
 };
