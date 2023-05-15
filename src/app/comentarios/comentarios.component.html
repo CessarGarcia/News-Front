@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+
+<div class="titulo-container">
+    <img src="https://th.bing.com/th/id/OIP.4jjnboJ9oskHSeyhL9kX2AHaDt?pid=ImgDet&w=750&h=375&rs=1" alt="Agens-Presse" class="logo_FAQ">
+    <h1 class="titulo_FAQ">Frequently Asked Question</h1>
+</div>
+
+<div class="container mt-12 mb-5">
+    <ng-container *ngFor="let question of preguntas">
+        <details class="mb-3">
+            <summary>{{question.pregunta}}</summary>
+            <p>{{question.respuesta}}</p>
+        </details>
+    </ng-container>
+</div>
+
+<hr>
+
+<div class="container mt-2 center-align">
+    Para cualquier duda o sugerencia favor de mandar un correo electronico: 
+    <a class="mensaje" href="mailto:agenspresse@gmail.com?&subject=Asunto%20ayuda%20o%20sugerencia&body=Escribe%20tu%20mensaje%20aqui">Enviar mail</a>
+</div>

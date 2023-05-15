@@ -14,6 +14,10 @@ export class NavbarComponent {
     this.router.navigateByUrl("/auth");
   }
 
+  gotoFaq(){
+    this.router.navigateByUrl("/comentarios");
+  }
+
   goToNoticias(){
     this.router.navigateByUrl("/crud-news");
   }

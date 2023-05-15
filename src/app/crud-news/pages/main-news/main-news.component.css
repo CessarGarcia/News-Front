@@ -59,19 +59,20 @@ tbody > tr:hover{
 
 .btn-logout {
     margin-right: 15px;
-    background-color: rgba(199, 17, 199, 0.5);
+    background-color: rgb(255, 20, 147, 0.3);
     width: 100px;
     height: 50px;
-    border-color: brown;
+    border-color: rgb(248, 0, 0, 0.5);
     cursor: pointer;
-    color: rgb(240, 248, 255);
+    color: rgb(240, 248, 255) !important;
     font-size: 15px;
+    border-radius: 30px;
 }
 
 .btn-logout:hover {
-    background-color: rgb(199, 17, 199);
-    border-radius: 30px;
+    background-color: rgb(255, 20, 147) !important;
     text-decoration: underline;
+    border-color: rgb(248, 0, 0);
 }
 
 .div-buttons {
@@ -79,6 +80,24 @@ tbody > tr:hover{
     justify-content: flex-end;
     align-items: flex-end;
     margin-top: 15px;
+}
+button>a {
+    background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+    color: #fff;
+    display: inline-block;
+    /* padding: 0 .5em 0.2em; */
+    text-decoration: none;
+    transition: background-size 0.5s;
+}
+
+button>a:hover {
+    --underline-width: 100%;
+    /* font-weight: bold; */
+}
+
+a > i{
+    font-size: 20px !important;
+    padding-left: 5px;
 }
 
 .mt-3 {
@@ -104,12 +123,12 @@ tbody > tr:hover{
 }
 
 .btn-menu {
-    padding: 5px 20px;
+    padding: 5px 10px;
     border: solid #EEE;
     border-radius: 30px;
     align-self: center;
     font-size: 20px;
-    margin: 10px;
+    margin-left: 10px;
     cursor: pointer;
     background: #FF813E;
     color: #fff;
@@ -162,7 +181,7 @@ td > button{
     }
 
     button > i {
-        font-size: 10px;
+        font-size: 15px;
         text-align: center;
     }
     .table-responsive {

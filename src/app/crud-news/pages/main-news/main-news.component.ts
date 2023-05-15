@@ -46,6 +46,9 @@ export class MainNewsComponent implements OnInit{
     localStorage.clear();
     this.router.navigateByUrl("/auth");
   }
+  gotoFaq(){
+    this.router.navigateByUrl("/comentarios");
+  }
   crearNewButton(){
     this.router.navigate(['/create-news']);
   }

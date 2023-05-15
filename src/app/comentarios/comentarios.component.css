@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.logo_FAQ {
+    margin-top: 50px;
+    margin-right: 5%;
+    width: 40%;
+    float: right;
+}
+
+.titulo_FAQ {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(90, 57, 197);
+    text-shadow: 5px 5px 20px black;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-12 {
+    margin-top: 12rem;
+}
+
+details {
+    background-color: rgba(88, 136, 207, 0.5);
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    padding-left: 5%;
+    border-radius: 30px;
+    padding-bottom: 1%;
+}
+
+details>p {
+    padding-bottom: 1%;
+}
+
+summary {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.mensaje {
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 1.5%;
+    border-radius: 30px;
+}
+
+hr {
+    width: 100%;
+    height: 5px;
+    background-color: gray;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+} 
+
+@media (max-width: 768px) {
+    .logo_FAQ {
+        width: 30%;
+    }
+
+    .titulo_FAQ {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo_FAQ {
+        width: 20%;
+    }
+
+    .titulo_FAQ {
+        font-size: 24px;
+    }
+}

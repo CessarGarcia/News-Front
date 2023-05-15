@@ -6,6 +6,7 @@ import { AuthGuard } from './guards/auth.guard';
 
 import { WeatherComponent } from './weather/weather.component';
 import {CriptoComponent} from './cripto/cripto.component';
+import { ComentariosComponent } from './comentarios/comentarios.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,12 @@ const routes: Routes = [
   {
     path: "Criptomonedas",
     component: CriptoComponent,
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard]
+  },
+  {
+    path: "comentarios",
+    component: ComentariosComponent,
     canActivate: [AuthGuard],
     canLoad: [AuthGuard]
   },

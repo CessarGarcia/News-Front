@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { InterceptorAuthInterceptor } from './interceptors/interceptor-auth.service';
 import { ErrorApiInterceptor } from './interceptors/error-api-interceptor.service';
+import { ComentariosComponent } from './comentarios/comentarios.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ErrorApiInterceptor } from './interceptors/error-api-interceptor.servic
     WeatherComponent,
     CriptoComponent,
     NavbarComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ComentariosComponent
   ],
   imports: [
     BrowserModule,
