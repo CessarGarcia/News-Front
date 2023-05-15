@@ -7,7 +7,7 @@
 }
 html {   
     min-width: 320px;   
-    max-width: 1400px !important; 
+    max-width: 100% !important; 
 }
 .text-danger{
     color: rgb(220, 53, 69);

@@ -4,6 +4,7 @@ body {
     background: linear-gradient(to right, #155799, #159957);
 
     height: 450px;
+    width: 100% !important;
 }
 
 table {
@@ -166,8 +167,9 @@ td > button{
 @media screen and (max-width: 600px) {
     button {
         width: 75px;
-        height: 25px;
+        height: 50px;
         font-size: 10px;
+        word-wrap: break-word;
     }
 
     .flexbox-align {
